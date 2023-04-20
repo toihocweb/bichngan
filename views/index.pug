@@ -1,0 +1,97 @@
+extends layout
+
+block content
+    include header
+    #cart
+        img(src="../images/shopping-bag.png", alt="")
+    main
+        .container
+            .row-even 
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/dau_nanh.jpg", alt="")
+                        .content
+                            h2 Sữa Đậu Nành
+                            .price
+                                span 10.000đ
+                            .add
+                                a(href="#", data-id='1') Thêm vào giỏ
+                            .bonus Hỗ trợ sức khỏe tim mạch và giảm nguy cơ bệnh lý liên quan đến mỡ máu.
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/dau_xanh.jpg", alt="")
+                        .content
+                            h2 Sữa Đậu Xanh
+                            .price
+                                span 15.000đ
+                            .add
+                                a(href="#",data-id='2') Thêm vào giỏ
+                            .bonus Giúp tăng cường sức khỏe tim mạch, hệ tiêu hóa và hệ miễn dịch.
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/che.jpg", alt="")
+                        .content
+                            h2 Chè Dưỡng Nhan
+                            .price
+                                span 15.000đ
+                            .add
+                                a(href="#",data-id='3') Thêm vào giỏ
+                            .bonus Giúp cải thiện độ đàn hồi và ngăn ngừa lão hóa da.
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/hat_sen.jpg", alt="")
+                        .content
+                            h2 Sữa Hạt Sen
+                            .price
+                                span 15.000đ
+                            .add
+                                a(href="#",data-id='4') Thêm vào giỏ
+                            .bonus Giàu chất dinh dưỡng, đặc biệt là protein, chất xơ và chất chống oxy hóa.
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/sua_bap.jpg", alt="")
+                        .content
+                            h2 Sữa Bắp
+                            .price
+                                span 15.000đ
+                            .add
+                                a(href="#",data-id='5') Thêm vào giỏ
+                            .bonus Giúp tăng cường sức khỏe xương, hệ tiêu hóa và hệ miễn dịch.
+                .col-xs-20.col-sm-10.col-md-5.col-lg-5
+                    .item
+                        .image-wrapper
+                            img(src="../images/sam.jpg", alt="")
+                        .content
+                            h2 Sâm
+                            .price
+                                span 10.000đ
+                            .add
+                                a(href="#",data-id='6') Thêm vào giỏ
+                            .bonus Giúp thanh nhiệt, giải độc, giúp phòng tránh tốt một số bệnh về tiêu hóa, mụn nhọt...
+    //- checkout aside appear when click on cart
+    #checkout
+        h2 Giỏ hàng
+        .items
+            ul
+        .total
+
+        form(action="/checkout")
+            //- user and phone number
+            .form-group
+                label(for="name") Họ và tên
+                input#name.form-control(type="text", name="name", placeholder="Họ và tên")
+            .form-group
+                label(for="phone") Số điện thoại
+                input#phone.form-control(type="text", name="phone", placeholder="Số điện thoại")
+            //- address
+            .form-group
+                label(for="address") Địa chỉ
+                input#address.form-control(type="text", name="address", placeholder="Địa chỉ")
+        .checkout
+            a(href="#").continue Tiếp tục mua hàng 
+            a(href="#").pay Đặt hàng

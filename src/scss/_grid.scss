@@ -1,0 +1,59 @@
+@import 'media';
+
+$col12: 20; // for row even
+$gutter: 20px;
+
+// define grid system for even row
+.row-even {
+    margin: 0 -($gutter/2);
+    display: flex;
+    flex-wrap: wrap;
+
+    div[class^='col'] {
+        padding: $gutter/2;
+    }
+
+    @include xs {
+        @for $i from 1 through $col12 {
+            .col-xs-#{$i} {
+                width: (100% / $col12) * $i;
+            }
+        }
+    }
+
+    @include sm {
+        @for $i from 1 through $col12 {
+            .col-sm-#{$i} {
+                width: (100% / $col12) * $i;
+                padding: $gutter;
+            }
+        }
+    }
+
+    @include md {
+        @for $i from 1 through $col12 {
+            .col-md-#{$i} {
+                width: (100% / $col12) * $i;
+                padding: $gutter;
+            }
+        }
+    }
+
+    @include lg {
+        @for $i from 1 through $col12 {
+            .col-lg-#{$i} {
+                width: (100% / $col12) * $i;
+                padding: $gutter;
+            }
+        }
+    }
+
+    @include xl {
+        @for $i from 1 through $col12 {
+            .col-xl-#{$i} {
+                width: (100% / $col12) * $i;
+                padding: $gutter;
+            }
+        }
+    }
+}
