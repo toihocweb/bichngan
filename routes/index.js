@@ -3,7 +3,8 @@ const router = express.Router();
 const FormData = require("form-data");
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.status(200).render("index");
+  // res.status(200).render("index");
+  res.send("Hello World!");
 });
 
 /* POST. */
