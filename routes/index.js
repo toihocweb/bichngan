@@ -4,7 +4,13 @@ const FormData = require("form-data");
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.status(200).render("index");
+  // res.status(200).render("index");
 });
+
+router.get("/a", function (req, res, next) {
+  res.send("Hello World!");
+});
+
 
 /* POST. */
 router.post("/", function (req, res, next) {
