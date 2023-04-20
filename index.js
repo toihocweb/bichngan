@@ -34,6 +34,9 @@ app.use(
 );
 
 app.use("/", indexRouter);
+app.get("/api", (req, res) => {
+  res.send("Hello World!");
+});
 
 const httpServer = http.createServer(app);
 
