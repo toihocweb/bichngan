@@ -7,7 +7,7 @@ const indexRouter = require("./routes/index");
 
 
 const customHeaders = (req, res, next) => {
-  res.setHeader("X-Powered-By", "Nhat Dep Chai");
+  res.setHeader("X-Powered-By", "Nhat Dep Chai 123");
   next();
 };
 
